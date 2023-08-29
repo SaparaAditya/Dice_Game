@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dice Roll</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="main.css">
+
+  </head>
+  <body>
+    <!-- <a href="index.html"><img class="back" src="back.png" alt=""></a> -->
+    <div class="container">
+    <div class="dice">
+        <p id="Pl1">Player 1</p>
+        <img class="img1" src="images/dice6.png">
+      </div>
+
+      <div class="dice">
+        <p id="Pl2">Player 2</p>
+        <img class="img2" src="images/dice6.png">
+      </div>
+    </div>
+    <div class="s_button" style="text-align: center;">
+      <button id="s_btn" type="submit" class="btn btn-outline-info btn-lg" name="button" onclick="roll();playAudio()">Roll the Dice</button>
+    </div>
+    <center>
+      <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="result"></p>
+
+    </center>
+    <p>Click the button to retrieve the value from local storage and display it:</p>
+	<button onclick="displayValue()">Retrieve and Display Value</button>
+	<p id="displayDiv"></p>
+    
+	<script>
+		function displayValue() {
+			// Get the value from local storage
+			var myValue = localStorage.getItem("s1");
+
+			// Display the value in the separate div tag
+			var displayDiv = document.getElementById("displayDiv");
+			displayDiv.innerHTML = "The value is: " + myValue;
+		}
+	</script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="main.js" charset="utf-8"></script>
+
+
+    <audio id="audioPlayer" src="Rolling-Dice-A1-www.fesliyanstudios.com.mp3"></audio>
+
+  
+	<script>
+		function playAudio() {
+			var audio = document.getElementById("audioPlayer");
+			audio.currentTime = 0;
+			audio.play();
+			setTimeout(function(){
+				audio.pause();
+			}, 1000);
+		}
+	</script>
+  </body>
+</html>
+
+
+	

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .songItem {
+            height: 50px;
+            display: flex;
+            background-color: rgb(156, 8, 8);
+
+            color: rgb(253, 239, 239);
+            margin: 12px 0;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 34px;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <button id="a" onclick="adds()">
+        buton
+    </button>
+    <div id="b">
+        
+    </div>
+    <script>
+        function adds() {
+            var r = document.getElementById("b");
+
+            r.className="songItem";
+
+            var rr = document.getElementById("songName");
+            r.innerHTML+="";
+            r.innerHTML+="hello how are you";
+            r.innerHTML+="<hr>";
+            
+
+        }
+    </script>
+</body>
+
+</html>
